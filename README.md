@@ -22,7 +22,7 @@ jobs:
             uses: actions/checkout@v2
 
         - name: Get Values From AWS Parameter Store
-            uses: philips-internal/aws-parameter-store-action@v1
+            uses: gmail-internal/aws-parameter-store-action@v1
             with:
                 secrets: |
                 /path/in/parameter/store | ENV_NAME
