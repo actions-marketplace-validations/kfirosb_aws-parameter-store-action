@@ -1,0 +1,12 @@
+name: ssm get values
+description: 'Get secrets from aws parameter store'
+inputs:
+  secrets:
+    description: 'parameters list'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - "${{ inputs.secrets }}"
