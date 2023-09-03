@@ -11,9 +11,6 @@ while IFS= read -r line;
         echo $?
         echo $type
         echo $env_value
-        # if [ "$env_value" == "" ]; then
-        #   exit 1
-        # fi
         if [ $type == 'SecureString' ]; then
           echo "::add-mask::$env_value"
         fi
